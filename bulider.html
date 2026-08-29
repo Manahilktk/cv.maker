@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Build Your CV — CVCraft</title>
+
+    <link rel="stylesheet" href="bulider.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <a href="index.html" class="brand">
+        CV<span>Craft</span>
+    </a>
+
+    <a href="index.html" class="back-link">
+        ← Back to home
+    </a>
+
+</header>
+
+
+<main class="builder-layout">
+
+
+    <!-- =========================
+         LEFT EDITOR
+    ========================== -->
+
+    <aside class="editor-panel">
+
+        <div class="editor-heading">
+            <span>CV BUILDER</span>
+
+            <h1>Create your CV</h1>
+
+            <p>
+                Add your information and see your CV update live.
+            </p>
+        </div>
+
+
+        <!-- TEMPLATE SELECTOR -->
+
+        <section class="card">
+
+            <div class="card-title">
+                <h2>Choose a template</h2>
+            </div>
+
+
+            <div class="template-selector">
+
+                <button
+                    class="template-option active"
+                    data-template="classic"
+                    type="button"
+                >
+                    <div class="template-thumb classic-thumb">
+                        <div></div>
+                        <span></span>
+                        <i></i>
+                    </div>
+
+                    <strong>Classic</strong>
+                </button>
+
+
+                <button
+                    class="template-option"
+                    data-template="modern"
+                    type="button"
+                >
+                    <div class="template-thumb modern-thumb">
+                        <div></div>
+                        <span></span>
+                        <i></i>
+                    </div>
+
+                    <strong>Modern</strong>
+                </button>
+
+
+                <button
+                    class="template-option"
+                    data-template="minimal"
+                    type="button"
+                >
+                    <div class="template-thumb minimal-thumb">
+                        <div></div>
+                        <span></span>
+                        <i></i>
+                    </div>
+
+                    <strong>Minimal</strong>
+                </button>
+
+
+                <button
+                    class="template-option"
+                    data-template="creative"
+                    type="button"
+                >
+                    <div class="template-thumb creative-thumb">
+                        <div></div>
+                        <span></span>
+                        <i></i>
+                    </div>
+
+                    <strong>Creative</strong>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERSONAL INFORMATION -->
+
+        <section class="card">
+
+            <h2>Personal information</h2>
+
+
+            <div class="photo-upload">
+
+                <div class="photo-placeholder" id="photoPlaceholder">
+                    +
+                </div>
+
+                <div class="photo-info">
+
+                    <label for="photoInput">
+                        Profile photo
+                    </label>
+
+                    <p>
+                        Optional · JPG or PNG
+                    </p>
+
+                    <input
+                        type="file"
+                        id="photoInput"
+                        accept="image/png,image/jpeg"
+                    >
+
+                    <button
+                        type="button"
+                        id="removePhoto"
+                        class="remove-photo"
+                    >
+                        Remove photo
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="field full">
+
+                    <label>Full name</label>
+
+                    <input
+                        id="nameInput"
+                        type="text"
+                        placeholder="e.g. Sarah Khan"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>Professional title</label>
+
+                    <input
+                        id="titleInput"
+                        type="text"
+                        placeholder="e.g. Software Developer"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>Email</label>
+
+                    <input
+                        id="emailInput"
+                        type="email"
+                        placeholder="you@example.com"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>Phone</label>
+
+                    <input
+                        id="phoneInput"
+                        type="text"
+                        placeholder="+92 300 0000000"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>Location</label>
+
+                    <input
+                        id="locationInput"
+                        type="text"
+                        placeholder="Islamabad, Pakistan"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SUMMARY -->
+
+        <section class="card">
+
+            <h2>Professional summary</h2>
+
+            <textarea
+                id="summaryInput"
+                rows="5"
+                placeholder="Write a short introduction about yourself..."
+            ></textarea>
+
+        </section>
+
+
+        <!-- EXPERIENCE -->
+
+        <section class="card">
+
+            <div class="card-heading">
+
+                <h2>Experience</h2>
+
+                <button
+                    type="button"
+                    class="add-button"
+                >
+                    + Add
+                </button>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="field">
+
+                    <label>Job title</label>
+
+                    <input
+                        id="jobInput"
+                        type="text"
+                        placeholder="Software Developer"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>Company</label>
+
+                    <input
+                        id="companyInput"
+                        type="text"
+                        placeholder="Company Name"
+                    >
+
+                </div>
+
+
+                <div class="field full">
+
+                    <label>Dates</label>
+
+                    <input
+                        id="datesInput"
+                        type="text"
+                        placeholder="2024 — Present"
+                    >
+
+                </div>
+
+
+                <div class="field full">
+
+                    <label>Description</label>
+
+                    <textarea
+                        id="experienceInput"
+                        rows="4"
+                        placeholder="Describe your responsibilities and achievements..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EDUCATION -->
+
+        <section class="card">
+
+            <div class="card-heading">
+
+                <h2>Education</h2>
+
+                <button
+                    type="button"
+                    class="add-button"
+                >
+                    + Add
+                </button>
+
+            </div>
+
+
+            <div class="form-grid">
+
+                <div class="field">
+
+                    <label>Degree</label>
+
+                    <input
+                        id="degreeInput"
+                        type="text"
+                        placeholder="Bachelor of Computer Science"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>Institution</label>
+
+                    <input
+                        id="institutionInput"
+                        type="text"
+                        placeholder="University Name"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>Start year</label>
+
+                    <input
+                        id="startYearInput"
+                        type="text"
+                        placeholder="2022"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>End year</label>
+
+                    <input
+                        id="endYearInput"
+                        type="text"
+                        placeholder="2026"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- OBJECTIVE -->
+
+        <section class="card">
+
+            <h2>Objective</h2>
+
+            <div class="field">
+
+                <label>Career objective</label>
+
+                <textarea
+                    id="objectiveInput"
+                    rows="4"
+                    placeholder="Write your career objective..."
+                ></textarea>
+
+            </div>
+
+        </section>
+
+
+        <!-- CERTIFICATES -->
+
+        <section class="card">
+
+            <h2>Certificates</h2>
+
+            <div class="field">
+
+                <label>Certificates</label>
+
+                <textarea
+                    id="certificatesInput"
+                    rows="4"
+                    placeholder="e.g. Web Development Certificate, Google — 2025"
+                ></textarea>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERESTS -->
+
+        <section class="card">
+
+            <h2>Interests</h2>
+
+            <div class="field">
+
+                <label>Interests</label>
+
+                <input
+                    id="interestsInput"
+                    type="text"
+                    placeholder="Technology, Reading, Design"
+                >
+
+                <small>
+                    Separate interests with commas.
+                </small>
+
+            </div>
+
+        </section>
+```
+
+
+
+
+
+
+        <!-- SKILLS -->
+
+        <section class="card">
+
+            <h2>Skills</h2>
+
+            <div class="field">
+
+                <label>Skills</label>
+
+                <input
+                    id="skillsInput"
+                    type="text"
+                    placeholder="JavaScript, React, HTML, CSS"
+                >
+
+                <small>
+                    Separate skills with commas.
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- LANGUAGES -->
+
+        <section class="card">
+
+            <h2>Languages</h2>
+
+            <div class="field">
+
+                <label>Languages</label>
+
+                <input
+                    id="languagesInput"
+                    type="text"
+                    placeholder="English, Urdu"
+                >
+
+                <small>
+                    Separate languages with commas.
+                </small>
+
+            </div>
+
+        </section>
+
+    </aside>
+
+
+
+    <!-- =========================
+         RIGHT PREVIEW
+    ========================== -->
+
+    <section class="preview-panel">
+
+        <div class="preview-header-bar">
+
+            <div>
+
+                <span>LIVE PREVIEW</span>
+
+                <p>
+                    Changes appear instantly
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="download-button"
+                id="downloadButton"
+            >
+                Download PDF
+            </button>
+
+        </div>
+
+
+        <div class="paper-area">
+
+            <article
+                id="cvPreview"
+                class="cv-paper classic"
+            >
+
+
+                <!-- CV HEADER -->
+
+                <header class="cv-header">
+
+                    <div class="cv-photo-wrap">
+
+                        <img
+                            id="previewPhoto"
+                            class="cv-photo"
+                            alt="Profile photo"
+                        >
+
+                    </div>
+
+
+                    <div class="cv-heading">
+
+                        <h1 id="previewName">
+                            Your Name
+                        </h1>
+
+                        <h2 id="previewTitle">
+                            Professional Title
+                        </h2>
+
+                    </div>
+
+
+                    <div class="cv-contact">
+
+                        <span id="previewEmail">
+                            your@email.com
+                        </span>
+
+                        <span id="previewPhone">
+                            +92 300 0000000
+                        </span>
+
+                        <span id="previewLocation">
+                            Pakistan
+                        </span>
+
+                    </div>
+
+                </header>
+
+
+                <!-- PROFILE -->
+
+                <section class="cv-section profile-section">
+
+                    <h3>PROFILE</h3>
+
+                    <p id="previewSummary">
+                        Your professional summary will appear here.
+                        Add a short introduction about yourself.
+                    </p>
+
+                </section>
+
+
+                <!-- EXPERIENCE -->
+
+                <section class="cv-section">
+
+                    <h3>EXPERIENCE</h3>
+
+
+                    <div class="cv-experience">
+
+                        <div class="experience-top">
+
+                            <strong id="previewJob">
+                                Job Title
+                            </strong>
+
+                            <span id="previewDates">
+                                2024 — Present
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="experience-company"
+                            id="previewCompany"
+                        >
+                            Company Name
+                        </div>
+
+
+                        <p id="previewExperience">
+                            Your experience description will appear here.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- EDUCATION -->
+
+                <section class="cv-section">
+
+                    <h3>EDUCATION</h3>
+
+
+                    <strong id="previewDegree">
+                        Bachelor's Degree
+                    </strong>
+
+
+                    <p class="education-line">
+
+                        <span id="previewInstitution">
+                            University Name
+                        </span>
+
+                        <span> · </span>
+
+                        <span id="previewEducationDates">
+                            2022 — 2026
+                        </span>
+
+                    </p>
+
+                </section>
+
+
+                <!-- OBJECTIVE -->
+
+                <section class="cv-section">
+
+                    <h3>OBJECTIVE</h3>
+
+                    <p id="previewObjective">
+                        Your career objective will appear here.
+                    </p>
+
+                </section>
+
+
+                <!-- CERTIFICATES -->
+
+                <section class="cv-section">
+
+                    <h3>CERTIFICATES</h3>
+
+                    <p id="previewCertificates">
+                        Your certificates will appear here.
+                    </p>
+
+                </section>
+
+
+                <!-- INTERESTS -->
+
+                <section class="cv-section">
+
+                    <h3>INTERESTS</h3>
+
+                    <p id="previewInterests">
+                        Your interests will appear here.
+                    </p>
+
+                </section>
+
+
+
+
+
+
+
+                <!-- SKILLS + LANGUAGES -->
+
+                <section class="cv-bottom">
+
+                    <div>
+
+                        <h3>SKILLS</h3>
+
+                        <p id="previewSkills">
+                            JavaScript · React · HTML · CSS
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>LANGUAGES</h3>
+
+                        <p id="previewLanguages">
+                            English · Urdu
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="bulider.js"></script>
+
+</body>
+</html>
